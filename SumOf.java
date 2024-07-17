@@ -22,12 +22,12 @@ public class SumOf {
     public static void sumOf(int[] arr, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
-            int value = target - arr[i];
             if (map.containsKey(arr[i])) {
                 System.out.println(map.get(arr[i]) + ", " + i);
                 return;
             } else {
-                map.put(value, i);
+                // Store value and index
+                map.put(target - arr[i], i);
             }
         }
 
