@@ -40,7 +40,7 @@ public class MadHav {
         int startIndex = step;
         int endIndex = step + 1;
         int sum = 0;
-        while (startIndex <= endIndex && startIndex < input.length && endIndex < input.length) {
+        while (startIndex <= endIndex) {
             sum += input[startIndex];
 
             // Check if is start equal to end then update variables to process next step
