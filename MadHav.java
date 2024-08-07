@@ -24,16 +24,18 @@ public class MadHav {
     }
 
     private static int isMadhavArray(int[] input) {
+
+         // Atleast size = 3
+         if (input.length < 3) {
+            return 0;
+        }
+
         // Check is valid size n(n+1)/2
         if (!isValid(input.length)) {
             return 0;
         }
 
-        // Atleast size = 3
-        if (input.length < 3) {
-            return 0;
-        }
-
+       
         int step = 1;
         int startIndex = step;
         int endIndex = step + 1;
@@ -44,7 +46,7 @@ public class MadHav {
             // Check if is start equal to end then update variables to process next step
             if (startIndex == endIndex) {
                 // Check sum more than input[0]
-                if (sum > input[0]) {
+                if (sum != input[0]) {
                     return 0;
                 }
 
