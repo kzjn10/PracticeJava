@@ -8,7 +8,7 @@ public class Inertial {
 
         boolean hasOddValue = false;
         int maxValue = a[0];
-        int minOddValue = -1;
+        int minOddValue = -1;//Integer.MIN_VALUE
         for (int i = 0; i < a.length; i++) {
             // Find max value of array
             if (maxValue < a[i]) {
